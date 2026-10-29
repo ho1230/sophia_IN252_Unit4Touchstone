@@ -71,6 +71,27 @@ public class Main {
     BudgetTracker tracker) {
     // Perform selected action
     // Return false when user wants to exit
+    switch (choice) {
+      case 1:
+        // Add a new expense
+        addExpense(input, tracker);
+        break;
+      case 2:
+        // Display recorded expenses
+        tracker.displayExpenses();
+        break;
+      case 3:
+        // Display the budget summary
+        tracker.displaySummary();
+        break;
+      case 4:
+        // Exit
+        System.out.println("Thank you for using Smart Budget Tracker!");
+        return false;
+      default:
+        // Handle all others
+        System.out.println("Invalid option. Please choose 1-4.");
+    }
     return true;
   }
 }
