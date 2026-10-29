@@ -30,7 +30,7 @@ public class BudgetTracker {
   }
 
   public void displayExpenses() {
-    System.out.println("\n***** EXPENSE LIST *****\n");
+    System.out.println("\n***** EXPENSE LIST *****");
     if (expenses.isEmpty()) {
         System.out.println("No recorded");
         return;
@@ -46,7 +46,7 @@ public class BudgetTracker {
   }
 
   public void displaySummary() {
-    System.out.println("\n***** BUDGET SUMMARY *****\n");
+    System.out.println("\n***** BUDGET SUMMARY *****");
     System.out.printf("Monthly Budget: $%.2f%n", monthlyBudget);
     System.out.printf("Total Expenses: $%.2f%n", calculateTotal());
     System.out.printf("Remaining Budget: $%.2f%n", getRemainingBudget());
