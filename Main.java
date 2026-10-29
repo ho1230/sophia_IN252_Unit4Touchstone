@@ -5,7 +5,7 @@ public class Main {
     // Start the budget tracker program
     Scanner input = new Scanner(System.in);
     System.out.println("***** BUDGET TRACKER *****");
-    double budget - readPositiveAmount (input,
+    double budget = readPositiveAmount (input,
                                         "Enter your monthly budget: $");
     BudgetTracker tracker = new BudgetTracker(budget);
     boolean running = true;
