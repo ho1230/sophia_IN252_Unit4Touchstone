@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class Main {
   public static void main(String[] args) {
     // Start the budget tracker program
+    Scanner input = new Scanner(System.in);
+    System.out.println("***** BUDGET TRACKER *****");
   }
 
   public static void showMenu() {
