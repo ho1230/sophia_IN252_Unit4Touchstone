@@ -12,14 +12,15 @@ public class Main {
     while (running){
       showMenu();
       System.out.print("Choose an option:");
+      String choiceText = input.nextLine();
       try {
         int choice = Integer.parseInt(choiceText);
         running = handleChoice(choice, input, tracker);
       } catch (NumberFormatException e) {
         System.out.println("Invalid input. Enter a number.");
       }
-      input.close();
     }
+    input.close();
   }
 
   public static void showMenu() {
@@ -37,10 +38,10 @@ public class Main {
     // Get expense information from user
     System.out.println("\n***** ADD EXPENSE *****");
     System.out.print("Enter expense name: ");
-    String name = input.nextLine();
+    String name = scanner.nextLine();
     System.out.print("Enter category: ");
-    String category = input.nextLine();
-    double amount = readPositiveAmount(input,
+    String category = scanner.nextLine();
+    double amount = readPositiveAmount(scanner,
             "Enter amount: $");
     Expense expense = new Expense(name, category, amount);
     tracker.addExpense(expense);
@@ -74,7 +75,7 @@ public class Main {
     switch (choice) {
       case 1:
         // Add a new expense
-        addExpense(input, tracker);
+        addExpense(scanner, tracker);
         break;
       case 2:
         // Display recorded expenses
